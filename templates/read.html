@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<div class="container text-center">
+  <div style="color:gray">
+    <!-- display lookup statistics in this div block-->
+    <!-- account for plurals using Jinja -->
+    Retrieved {{ phrase_count }} {% if phrase_count == 1 %}phrase{% else %}phrases{% endif %}
+
+    ({{ character_count }} {% if character_count == 1 %}character{% else %}characters{% endif %})
+
+    in {{ elapsed_time }}<br>
+  </div>
+  <div>
+    Click or tap on characters below:
+  </div>
+
+  <!-- app's own JavaScript -->
+  <script src="static/scripts.js"></script>
+
+  <!-- JavaScript for augmenting characters -->
+  <script>
+    /*global createAugmentedSpansFor */
+    $(function() {
+      // Add Chinese characters in spans to #characters div
+      var text = '{{ phrases|tojson }}'
+      var phrases = JSON.parse(text);
+      $("#characters").append(createAugmentedSpansFor(phrases));
+      
+    });
+  </script>
+    <!-- characters are inserted in this div block-->
+  <div id="characters">
+    
+  </div>
+</div>
+
+{% endblock %}

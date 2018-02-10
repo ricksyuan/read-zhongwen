@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block main %}
+  <!-- app's own JavaScript -->
+  <script src="static/scripts.js"></script>
+
+  <script>
+    /*global createAugmentedSpansFor */
+    var phrases = JSON.parse('{{ phrases|tojson }}');
+    $(function() {
+      $("#tryit").append(createAugmentedSpansFor(phrases));
+    });
+  </script>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12"> <!--  text-center -->
+        <h1>About</h1>
+          <p>
+            Read Faster, Read Smarter, Read Zhongwen.
+          </p>
+          <p>
+            <b>Read Zhongwen</b> transforms text from any source into text optimized for learning Chinese.
+              <ul>
+                <li><b>Hover</b> your mouse over a character and Read Zhongwen will automatically highlight the appropriate multi-character phrases.</li>
+                <li><b>Tap or click</b> on any unfamiliar phrases to see pinyin and definitions.</li>
+                <div id="tryit" style="text-align: center"><!-- Text from JavaScript --></div> 
+              </ul>
+          </p>
+            To <b>Read Zhongwen</b>, simply:
+            <ol>
+              <li><b>Copy and paste</b> Chinese text from any website or source into the <a href="{{ url_for('index') }}">search box</a> on the home page.</li>
+              <li>Hit the <b>submit</b> button.</li>
+              <li><b>Read Zhongwen!</b></li>
+            </ol>
+          <p>
+            Read Zhongwen is great for reading whole articles in Chinese newspapers in native Mandarin.
+          </p>  
+          <p>
+            Read Zhongwen uses the <a href="https://cc-cedict.org/wiki/start">CC-CEDICT</a> dictionary maintained by MDBG.
+          </p>
+        </div>
+      </div>
+  </div>    
+{% endblock %}

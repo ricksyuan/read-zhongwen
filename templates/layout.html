@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Read Zhongwen</title>
+    <!-- Favicon (icon in tab) -->
+    <link rel="shortcut icon" type="image/ico" href="/static/favicon.ico"/>
+    <!-- Bootstrap core CSS -->
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <style>
+      .navbar
+      {
+        margin-bottom: 10px;
+      }
+    </style>
+    
+    <!-- Own CSS -->
+    <link href="static/styles.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <!-- fixed-top -->
+    <!-- Fixed navbars use position: fixed, meaning they’re pulled from the normal flow of the DOM and may require custom CSS (e.g., padding-top on the <body>) to prevent overlap with other elements.-->
+    
+    <!-- ml-auto is margin-left:auto and pushes buttons to the right-->
+    <!-- navbarNavAltMarkup. Just a name from Bootstrap example -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="\">Read Zhongwen</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link active" href="\">Home</a>
+          <a class="nav-item nav-link" href="\about">About</a>
+        </div>
+      </div>
+    </nav>
+            
+    <!-- Page Content -->
+    
+    <main>
+      {% block main %}
+      
+      {% endblock %}
+    </main>
+  </body>
+  
+</html>
+
