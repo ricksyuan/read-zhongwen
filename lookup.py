@@ -2,7 +2,7 @@ import sqlite3
 from escape import jsonescape
 
 # Max length of characters in traditional or simplified CEDICT entry. Update whenever loading new CEDICT dictionary.
-MAX_LENGTH = 20;
+MAX_LENGTH = 20
 
 def lookup(text):
     """ Lookup simplified character in CEDICT SQL database.
@@ -95,7 +95,6 @@ def analyze_text(text):
     connection = sqlite3.connect(db_file)
     cursor = connection.cursor()
 
-    characters = []
     simplified_count = 0
     traditional_count = 0
     other_count = 0
