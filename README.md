@@ -46,11 +46,15 @@ AWS CodeStar user guide.
 
         $ pip3 install -r requirements.txt
 
-4. Start the Flask development server:
+4. Create searches database:
+
+        $ python3 createdb_searches.py
+
+5. Start the Flask development server:
 
         $ python3 application.py --port 8000
 
-5. Open http://127.0.0.1:8000/ in a web browser to view the output of your
+6. Open http://127.0.0.1:8000/ in a web browser to view the output of your
    service.
 
 What Do I Do Next?
