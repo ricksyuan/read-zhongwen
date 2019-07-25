@@ -9,18 +9,16 @@ Read Zhongwen allows the user to improve their Mandarin reading skills by copyin
 Technologies
 ------------
 
-Read Zhongwen uses a simple Flask web service deployed using AWS Elastic Beanstalk.
+Read Zhongwen is written in Python and uses a simple Flask web service deployed using AWS Elastic Beanstalk.
 
 Files
 -----
 
-* requirements.txt - this file is used to install Python dependencies needed by
+* requirements.txt - used to install Python dependencies needed by
   the Flask application
-* application.py - this file contains the Flask application
-* flaskrun.py - this file contains a CLI wrapper that passes
-  options to the Flask application
-* .ebextensions/ - this directory contains the configuration files that allow
-  AWS Elastic Beanstalk to deploy the application
+* application.py - contains the Flask application
+* flaskrun.py - contains a CLI wrapper that passes options to the Flask application
+* .ebextensions/ - directory containing the configuration files that allow AWS Elastic Beanstalk to deploy the application
 
 Steps to Run the Project Locally
 --------------------------------
